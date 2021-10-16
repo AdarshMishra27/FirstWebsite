@@ -1,0 +1,17 @@
+ /* element selector */
+ h1 {
+    text-align: center;
+    color: blue;
+}
+/* id selector */
+#section1 {
+    color: brown;
+    font-size: xx-large;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+}
+/* class selector */
+.highlight {
+    background-color: green;
+    width: fit-content;
+}
