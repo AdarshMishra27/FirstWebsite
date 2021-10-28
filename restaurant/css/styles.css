@@ -1,0 +1,12 @@
+body {
+    font-size: 16px;
+    color: white;
+    background-color: rgb(78, 20, 20);
+    font-family: 'Zen Kurenaido', sans-serif;
+}
+
+#head_name {
+    font-size: 35px;
+    font-weight: 500;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
