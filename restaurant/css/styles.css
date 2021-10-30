@@ -1,3 +1,9 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
 body {
     font-size: 16px;
     color: white;
@@ -5,8 +11,110 @@ body {
     font-family: 'Zen Kurenaido', sans-serif;
 }
 
+#nav {
+    margin-right: 10px;
+}
+
 #head_name {
     font-size: 35px;
     font-weight: 500;
     font-family: Georgia, 'Times New Roman', Times, serif;
+    color: rgb(21, 68, 6);
+    margin-left: 10px;
 }
+
+#format-links {
+    text-decoration: none;
+    color: rgb(78, 20, 20);
+    font-size: 20px;
+    font-weight: 200;
+    text-align: center;
+}
+
+#phone {
+    color: rgb(78, 20, 20);
+    font-weight: 300;
+    padding: 10px;
+    text-align: center;
+}
+
+#bg {
+    padding: 25px;
+}
+
+#menu-tile, #specials-tile, #map-tile {
+  height: 250px;
+  width: 100%;
+  margin-bottom: 15px;
+  position: relative;
+  border: 2px solid #3F0C1F;
+  overflow: hidden;
+}
+
+#menu-tile span, #specials-tile span, #map-tile span {
+  position:absolute;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 1.2em;
+  padding: 2px;
+  opacity: 0.8;
+  background-color: #220610;
+}
+
+#menu-tile {
+  background: url('../images/menu.jpg') no-repeat;
+  background-position: center;
+}
+#specials-tile {
+  background: url('../images/special.jpg') no-repeat;
+  background-position: center;
+}
+
+#menu-tile:hover, #specials-tile:hover, #map-tile:hover {
+  box-shadow: 0 1px 5px 1px #cccccc;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+  text-align: center;
+}
+
+/********** Large devices only **********/
+@media (min-width: 1200px) {
+    /* .container .jumbotron {
+      background: url('../images/bg.jpg') no-repeat;
+      height: 675px;
+    } */
+    
+  }
+  
+  /********** Medium devices only **********/
+  @media (min-width: 992px) and (max-width: 1199px) {
+
+    /* Home Page */
+    /* .container .jumbotron {
+      background: url('../images/bg.jpg') no-repeat;
+      height: 558px;
+    } */
+    /* End Home Page */
+  }
+  
+  /********** Small devices only **********/
+  @media (min-width: 768px) and (max-width: 991px) {
+    /* Home Page */
+    /* .container .jumbotron {
+      background: url('../images/bg.jpg') no-repeat;
+      height: 432px;
+    } */
+    /* End Home Page */
+  
+  }
+  
+  /********** Extra small devices only **********/
+  @media (max-width: 767px) {
+  
+  }
