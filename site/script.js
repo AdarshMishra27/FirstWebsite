@@ -1,23 +1,21 @@
-// console.log(document.getElementById("title"));
-// console.log(document instanceof HTMLDocument);
-function sayHello() {
-    var st=document.getElementById("name").value;
-    var msg="<h2>Hello "+st+" !</h2>";
-    // document.getElementById("content").textContent=msg;
-    document.getElementById("content").innerHTML=msg;
+document.addEventListener("DOMContentLoaded", function (event) {
+    document.querySelector("button").addEventListener("click",function(){
+        ajaxUtils.sendGetRequest("data/names.json",function(res) {
+            // var name = request.responseText;
 
-    if(st==="stud") {
-        var title=document.querySelector("#title").textContent;
-        title+=" You are stud!"
-        document.querySelector("#title").textContent=title;
-    }
-}
+            var msg=res.firstName+" "+res.lastName;
+            if(res.likesChineseFood) {
+                msg+=" likes Chinese Food";
+            }else {
+                msg+=" does not like Chinese Food"
+            }
+            
+            msg+=" and uses ";
+            msg+=res.numberOfDisplays + 1;
+            msg+=" displays for coding.";
 
-// document.querySelector("button").addEventListener("click",sayHello);
-document.querySelector("button").onclick=sayHello;
-document.querySelector("body").addEventListener("mousemove",function (event) {
-    if(event.shiftKey===true) {
-        console.log("x="+event.clientX);
-        console.log("y="+event.clientY);
-    }
+              document.querySelector("#content")
+                .innerHTML = "<h2>Hello " + msg + "!</h2>";
+        });
+    })
 });
