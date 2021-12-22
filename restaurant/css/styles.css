@@ -221,3 +221,9 @@ a {
     font-style: italic;
     text-align: justify;
   }
+
+  #footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
